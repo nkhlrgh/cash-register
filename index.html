@@ -4,12 +4,16 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="/app.js"></script>
     <title>Cash Register</title>
   </head>
   <body>
     <h1>Welcome to your personal Cash Register</h1>
-    <input type="number" placeholder="Enter the bill amount" />
-    <input type="number" placeholder="Enter the note given" />
-    <input type="button" value="Calculate" />
+    <input id="bill" type="number" placeholder="Enter the bill amount" />
+    <input id="note-input" type="number" placeholder="Enter the note given" />
+    <input type="button" value="Calculate" onclick="onClickHandler()" />
+    <div class="output">
+      <ul id="list"></ul>
+    </div>
   </body>
 </html>
