@@ -1,6 +1,7 @@
 var input1 = document.querySelector("#bill-input");
 var input2 = document.querySelector("#note-input");
 var display = document.querySelector(".output");
+var resetBtn = document.querySelector("#rst-btn");
 var currencies = [2000, 500, 200, 100, 50, 20, 10, 2, 1];
 function onClickHandler() {
   var billInput = input1.value;
@@ -19,3 +20,12 @@ function onClickHandler() {
     }
   });
 }
+
+function resetHandler() {
+  var list = document.getElementById("output-list");
+  while (list.hasChildNodes()) {
+    list.removeChild(list.firstChild);
+  }
+}
+
+resetBtn.addEventListener("click", resetHandler);
